@@ -1,0 +1,25 @@
+<annotation>
+	<folder>french_fries</folder>
+	<filename>1636661</filename>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>509</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>french_fries</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>72</xmin>
+			<ymin>209</ymin>
+			<xmax>447</xmax>
+			<ymax>456</ymax>
+		</bndbox>
+	</object>
+<filetype>jpg</filetype></annotation>

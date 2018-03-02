@@ -1,0 +1,4 @@
+pandas==0.22.0
+numpy==1.14.0
+Pillow==5.0.0
+tensorflow==1.6.0

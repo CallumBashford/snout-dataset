@@ -1,0 +1,30 @@
+item {
+  id: 1
+  name: french_fries
+}
+
+item {
+  id: 2
+  name: hamburger
+}
+
+item {
+  id: 3
+  name: hotdog
+}
+
+item {
+  id: 4
+  name: pizza
+}
+
+item {
+  id: 5
+  name: sushi
+}
+
+item {
+  id: 6
+  name: sashimi
+}
+
