@@ -30,7 +30,7 @@ def xml_to_csv(path):
             # Don't hate, we're lazy.
             print('item {', end='\n', file=pb)
             print('  id: {}'.format(i + 1), end='\n', file=pb)
-            print('  name: {}'.format(label), end='\n', file=pb)
+            print("  name: '{}'".format(label), end='\n', file=pb)
             print('}', end='\n\n', file=pb)
 
     column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', 'ymax']
