@@ -1,0 +1,25 @@
+<annotation>
+  <folder>hotdog</folder>
+  <filename>93944</filename>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>512</width>
+    <height>382</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>hotdog</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>1</xmin>
+      <ymin>62</ymin>
+      <xmax>489</xmax>
+      <ymax>284</ymax>
+    </bndbox>
+  </object>
+<filetype>jpg</filetype></annotation>

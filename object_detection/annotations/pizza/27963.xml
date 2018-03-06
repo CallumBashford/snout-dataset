@@ -1,0 +1,25 @@
+<annotation>
+  <folder>pizza</folder>
+  <filename>27963</filename>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>512</width>
+    <height>384</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>pizza</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>41</xmin>
+      <ymin>20</ymin>
+      <xmax>462</xmax>
+      <ymax>372</ymax>
+    </bndbox>
+  </object>
+<filetype>jpg</filetype></annotation>

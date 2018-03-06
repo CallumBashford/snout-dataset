@@ -1,0 +1,25 @@
+<annotation>
+	<folder>hamburger</folder>
+	<filename>976482</filename>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>382</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hamburger</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>46</ymin>
+			<xmax>318</xmax>
+			<ymax>380</ymax>
+		</bndbox>
+	</object>
+<filetype>jpg</filetype></annotation>

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>sushi</folder>
+	<filename>26310</filename>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>384</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>sashimi</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>15</xmin>
+			<ymin>10</ymin>
+			<xmax>511</xmax>
+			<ymax>336</ymax>
+		</bndbox>
+	</object>
+<filetype>jpg</filetype></annotation>

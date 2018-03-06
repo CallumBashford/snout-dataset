@@ -1,0 +1,6 @@
+french_fries
+hamburger
+hotdog
+pizza
+sushi
+sashimi
