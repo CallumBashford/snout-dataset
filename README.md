@@ -1,8 +1,7 @@
 # Snout Dataset
 **The main Snout repo can be found [here](https://github.com/CallumBashford/Snout)**
-## Directory Structure
-```bash
-├── cuisine_detection
+## Project Structure
+```├── cuisine_detection
 ├── object_detection
 │   ├── annotations
 │   ├── data
