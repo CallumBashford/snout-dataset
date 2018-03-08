@@ -33,6 +33,8 @@ for path in glob.glob('annotations/**/*.xml'):
             print('Cannot process "{}" - Matching image cannot be found'.format(path))
             continue
         ext = img.split('.')[1]
+        for ele in et.findall('filetype'):
+            et.getroot().remove(ele)
         new_tag = xml.etree.ElementTree.SubElement(et.getroot(), 'filetype')
         new_tag.text = ext
     et.write(path)

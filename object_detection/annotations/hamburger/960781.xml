@@ -1,4 +1,4 @@
-<annotation>
+<annotation verified="yes">
 	<folder>hamburger</folder>
 	<filename>960781</filename>
 	<source>
@@ -16,10 +16,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>161</xmin>
+			<xmin>164</xmin>
 			<ymin>10</ymin>
 			<xmax>464</xmax>
-			<ymax>311</ymax>
+			<ymax>306</ymax>
 		</bndbox>
 	</object>
 <filetype>jpg</filetype></annotation>

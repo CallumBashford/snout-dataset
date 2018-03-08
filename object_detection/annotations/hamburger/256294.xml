@@ -13,13 +13,13 @@
 	<object>
 		<name>hamburger</name>
 		<pose>Unspecified</pose>
-		<truncated>1</truncated>
+		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>160</xmin>
+			<xmin>163</xmin>
 			<ymin>107</ymin>
-			<xmax>416</xmax>
-			<ymax>382</ymax>
+			<xmax>413</xmax>
+			<ymax>373</ymax>
 		</bndbox>
 	</object>
 <filetype>jpg</filetype></annotation>
