@@ -18,8 +18,8 @@
 		<bndbox>
 			<xmin>1</xmin>
 			<ymin>3</ymin>
-			<xmax>311</xmax>
-			<ymax>329</ymax>
+			<xmax>286</xmax>
+			<ymax>320</ymax>
 		</bndbox>
 	</object>
 <filetype>jpg</filetype></annotation>
