@@ -1,0 +1,8 @@
+{
+  "french_fries": ["fries", "french fries", "chips"],
+  "hamburger": ["burger", "hamburger", "cheeseburger"],
+  "hotdog": ["hotdog"],
+  "pizza": ["pizza"],
+  "sushi": ["sushi"],
+  "sashimi": ["sashimi"]
+}

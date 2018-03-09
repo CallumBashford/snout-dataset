@@ -1,0 +1,2 @@
+justeatpy==0.0.1
+nltk==3.2.5

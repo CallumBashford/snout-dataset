@@ -1,1 +1,0 @@
-git+git://github.com/CallumBashford/justeat-python.git

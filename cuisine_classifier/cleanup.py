@@ -17,7 +17,7 @@ stemmer = LancasterStemmer()
 stop_words = set(stopwords.words('english'))
 
 counter = defaultdict(int)
-label_map = []
+# label_map = None
 patterns = []
 similarity_keep = []
 
@@ -48,10 +48,12 @@ def similarity(pattern, threshold):
                 return p
     return pattern
 
-def labelmap(pattern):
-    for l in label_map:
-        if l in pattern:
-            return pattern
+def labelmap(pattern, label_map):
+    # print(label_map)
+    for k, v in label_map.items():
+        for l in v:
+            if l in pattern:
+                return k
     return None
 
 regex_filters = {
@@ -61,8 +63,8 @@ regex_filters = {
     'ampersand': partial(re.sub, r'&', 'and'),
     'nonalpha': partial(re.sub, r'[^a-zA-Z0-9&]', ' '),
     'whitespace+': partial(re.sub, r'\s+', ' '),  # concat multiple whitespaces
-    'low': low,
-    'similarity': similarity
+    # 'low': low,
+    # 'similarity': similarity
 }
 
 def filter_order(_filter):
@@ -77,19 +79,22 @@ parser.add_argument('-f', '--filter', type=str,
                     default=','.join(regex_filters.keys()))
 parser.add_argument('-l', '--low', type=int, default=0)
 parser.add_argument('-s', '--similar', type=int, default=.91)
-parser.add_argument('-m', '--map', type=str, default='../object_detection/data/label_map.txt')
+parser.add_argument('-m', '--map', type=str, default='training/label_map.json')
 # parser.add_argument('-b', '--blocked', type=str)
 
 
 def main(directory, filters, args):
     intents = defaultdict(list)
+    label_map = {}
     if labelmap in filters:
         print('Loading label map (labelmap filter)')
-        with open(args.map, 'r') as f:
-            labels = [x.strip().replace('_', ' ') for x in f.readlines()]
-            for label in labels:
-                cleaned = clean(label)
-                label_map.extend(cleaned)
+        label_map = json.load(open(args.map, 'r'))
+        # with open(args.map, 'r') as f:
+        #     label_map = [x.strip() for x in f.readlines()]
+            # labels = [x.strip().replace('_', ' ') for x in f.readlines()]
+            # for label in labels:
+                # cleaned = clean(label)
+                # label_map.extend(cleaned)
         print('Loaded label map (labelmap filter) ({} sub labels)'.format(len(label_map)))
         print(label_map)
     if low in filters or similarity in filters:
@@ -115,15 +120,19 @@ def main(directory, filters, args):
             for prod in v:
                 if prod in intents[k]:
                     continue
-                for f in filters:
-                    if prod is None:
-                        break
-                    if f == low:
-                        prod = f(prod, args.low)
-                    elif f == similarity:
-                        prod = f(prod, args.similar)
-                    else:
-                        prod = f(prod)
+                # for f in filters:
+                #     if prod is None:
+                #         break
+                #     if f == labelmap:
+                #         prod = f(prod)
+                #     elif f == low:
+                #         prod = f(prod, args.low)
+                #     elif f == similarity:
+                #         prod = f(prod, args.similar)
+                #     else:
+                #         prod = f(prod)
+                # print(label_map)
+                prod = labelmap(prod, label_map)
                 if prod not in intents[k] and prod is not None:
                     intents[k].append(prod)
     json.dump(intents, open('data/intents.json', 'w'))
