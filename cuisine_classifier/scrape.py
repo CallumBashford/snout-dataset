@@ -31,7 +31,10 @@ def main(postcode):
             for cat in je.get(API_PATH['menu_categories'], menu_id=menu.id).categories:
                 for prod in je.get(API_PATH['menu_products'], menu_id=menu.id, category_id=cat.id).products:
                     total+=1
-                    intents['+'.join(sorted([cuisine.seo_name.lower().strip() for cuisine in res.cuisine_types]))].append(prod.name.lower().strip())
+                    # JustEat's API doesn't like joined cuisine types
+                    # intents['+'.join(sorted([cuisine.seo_name.lower().strip() for cuisine in res.cuisine_types]))].append(prod.name.lower().strip())
+                    for cuisine in res.cuisine_types:
+                        intents[cuisine.seo_name.lower().strip()].append(prod.name.lower().strip())
 
     if len(intents) > 0:
         json.dump(intents, open('intents/{}.json'.format(uuid.uuid4()), 'w'))

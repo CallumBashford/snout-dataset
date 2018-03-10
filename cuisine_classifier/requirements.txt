@@ -1,2 +1,1 @@
-justeatpy==0.0.1
-nltk==3.2.5
+git+https://github.com/CallumBashford/justeat-python.git

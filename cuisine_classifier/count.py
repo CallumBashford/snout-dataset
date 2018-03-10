@@ -13,6 +13,9 @@ def labelmap(pattern):
     return None
 
 intents = defaultdict(lambda: defaultdict(int))
+count = defaultdict(int)
+
+weighted = defaultdict(lambda: defaultdict(int))
 
 for path in glob.glob('{}/**.json'.format('intents')):
     j = json.load(open(path))
@@ -21,5 +24,12 @@ for path in glob.glob('{}/**.json'.format('intents')):
             pattern = labelmap(pattern)
             if pattern is not None:
                 intents[pattern][k]+=1
+            count[k]+=1
+
+for _k, _v in intents.items():
+    for k, v in _v.items():
+        weighted[_k][k] = v / count[k] * 100
 
 json.dump(intents, open('data/intents.json', 'w'))
+json.dump(count, open('data/count.json', 'w'))
+json.dump(weighted, open('data/weighted.json', 'w'))
